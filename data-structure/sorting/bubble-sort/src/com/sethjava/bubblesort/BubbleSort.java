@@ -4,6 +4,7 @@ package com.sethjava.bubblesort;
 - Time Complexity - O(n^2)
 - Algorithm takes 100 steps to sort 10 items, 10000 steps to sort 100 items
 - Algorithm degrades quickly
+- Stable algorithm
  */
 public class BubbleSort {
 
@@ -16,8 +17,8 @@ public class BubbleSort {
     }
 
     private static int[] bubbleSort(int[] intArray) {
-        for(int unsortedPartitionIndex = intArray.length -1; unsortedPartitionIndex > 0; unsortedPartitionIndex--) {
-            for(int i=0; i < unsortedPartitionIndex; i++){
+        for(int lastUnsortedPartitionIndex = intArray.length -1; lastUnsortedPartitionIndex > 0; lastUnsortedPartitionIndex--) {
+            for(int i=0; i < lastUnsortedPartitionIndex; i++){
                 if(intArray[i] > intArray[i+1])
                     swap(intArray, i, i+1);
             }
